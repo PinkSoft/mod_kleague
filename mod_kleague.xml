@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <!-- Name of the Module -->
+	<name>mod_kleague</name> 
+ 
+    <!-- Name of the Author -->
+	<author>B H A Pinkster</author> 
+ 
+    <!-- Version Date of the Module -->
+	<creationDate>26-10-2016</creationDate> 
+ 
+    <!-- Copyright information -->
+	<copyright>All rights reserved by Pinkster Automatisering 2016.</copyright> 
+ 
+    <!-- License Information -->
+	<license>GPL 2.0</license> 
+ 
+    <!-- Author's email address -->
+	<authorEmail>development@pinsoft.nl</authorEmail> 
+ 
+    <!-- Author's website -->
+	<authorUrl>www.pinsoft.nl</authorUrl> 
+ 
+    <!-- Module version number -->
+	<version>1.1.0</version> 
+ 
+    <!-- Description of what the module does -->
+	<description>Tonen van wedstrijden en uitslagen</description>
+ 
+    <!-- Listing of all files that should be installed for the module to function -->
+	<files>
+        <!-- The "module" attribute signifies that this is the main controller file -->
+        <filename>mod_kleague.xml</filename>
+        <filename module="mod_kleague">mod_kleague.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+		
+	</files>
+ 
+    <!-- Optional parameters -->
+    <config>
+    	<fields name="params">
+    		<fieldset name="basic" label="basic">
+				<field name="show" type="radio" default="0" label="Wat te tonen" description="Geeft aan wat er moet worden getoond">
+					<option value="0">Uitslagen</option>
+					<option value="1">Programma</option>
+				</field>
+				<field name="no" type="text" default="0" label="Aantal wedstrijden" description="Hoeveel wedstrijden moeten er worden getoond" size="2"/>
+				<field name="days" type="text" default="0" label="Dagen" description="Hoeveel dagen in de toekomst of in het verleden" size="3"/>
+				<field name="club" type="text" default="0" label="Club Id" description="Van welke club moeten de wedstrijden worden getoond" size="3"/>
+			</fieldset>
+		</fields>
+	</config>
+    
+	
+</extension>
